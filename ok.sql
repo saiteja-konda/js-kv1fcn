@@ -51,9 +51,9 @@ from db_epr_neo_archive.doc_ref_inst join db_epr_all.reference on neo_DOC_unique
 AND NEO_BATCH=BATCH
 WHERE
 concat( neo_state_code, neo_county_code) IN
-('FL02','IL64	','IL72	','ILA1	',
-'IL10	','IL19	','IL22	','IL45	',
-'IL49	','IL90	','IL99	',
+('FL02','IL64','IL72','ILA1',
+'IL10','IL19','IL22','IL45',
+'IL49','IL90','IL99',
 )
 AND reference_doc_number LIKE '%E%' AND neo_ref_inst_nbr LIKE '%E%'
 AND reference_recording_year IS NOT NULL
@@ -115,8 +115,7 @@ AND A.NEO_BATCH=B.BATCH
 
 where concat(A.neo_state_code,A.neo_county_code) IN
 ('FL01','FL08','FL13'	
-,'FL16','FL20','FL24','FL25'	
-,'FL26','FL30','FL32','FL33'	
+,'FL16','FL20','FL24','FL30','FL32'
 ,'FL37','FL38','FL39','FL40'	
 ,'FL42','FL46','FL48','FL54'
 ,'FL60','FL61','FL62','FL65')
